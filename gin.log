@@ -2,14 +2,43 @@
  - using env:	export GIN_MODE=release
  - using code:	gin.SetMode(gin.ReleaseMode)
 
-[GIN-debug] GET    /test                     --> main.main.func1 (5 handlers)
-[GIN-debug] GET    /videos                   --> main.main.func2 (5 handlers)
-[GIN-debug] POST   /videos                   --> main.main.func3 (5 handlers)
+[GIN-debug] GET    /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] HEAD   /css/*filepath            --> github.com/gin-gonic/gin.(*RouterGroup).createStaticHandler.func1 (4 handlers)
+[GIN-debug] Loaded HTML Templates (4): 
+	- index.html
+	- 
+	- footer.html
+	- header.html
+
+[GIN-debug] GET    /api/test                 --> main.main.func1 (4 handlers)
+[GIN-debug] GET    /api/videos               --> main.main.func2 (4 handlers)
+[GIN-debug] POST   /api/videos               --> main.main.func3 (4 handlers)
+[GIN-debug] GET    /view/videos              --> mywebapp.com/m/controller.VideoController.ShowAll-fm (4 handlers)
 [GIN-debug] [WARNING] You trusted all proxies, this is NOT safe. We recommend you to set a value.
 Please check https://pkg.go.dev/github.com/gin-gonic/gin#readme-don-t-trust-all-proxies for details.
 [GIN-debug] Listening and serving HTTP on :8080
-::1 -[30 May 23 10:40 EAT] GET /videos 200 6.1384ms 
-::1 -[30 May 23 10:40 EAT] POST /videos 201 8.8625ms 
-::1 -[30 May 23 10:40 EAT] POST /videos 201 6.2866ms 
-::1 -[30 May 23 10:40 EAT] POST /videos 201 11.7539ms 
-::1 -[30 May 23 10:41 EAT] GET /videos 200 26.1803ms 
+::1 -[31 May 23 11:23 EAT] GET /view/videos 200 12.1981ms 
+::1 -[31 May 23 11:23 EAT] GET /view/style.css 404 7.2798ms 
+::1 -[31 May 23 11:23 EAT] GET /view/main.js 404 11.5964ms 
+::1 -[31 May 23 11:24 EAT] GET /api/videos 200 6.6687ms 
+::1 -[31 May 23 11:24 EAT] POST /api/videos 201 7.5427ms 
+::1 -[31 May 23 11:24 EAT] POST /api/videos 201 10.5526ms 
+::1 -[31 May 23 11:24 EAT] POST /api/videos 201 5.3122ms 
+::1 -[31 May 23 11:24 EAT] POST /api/videos 201 7.5979ms 
+::1 -[31 May 23 11:24 EAT] POST /api/videos 201 8.5848ms 
+::1 -[31 May 23 11:24 EAT] POST /api/videos 201 4.2759ms 
+::1 -[31 May 23 11:24 EAT] GET /view/videos 200 8.0357ms 
+::1 -[31 May 23 11:24 EAT] GET /view/style.css 404 5.4011ms 
+::1 -[31 May 23 11:24 EAT] GET /view/main.js 404 9.9431ms 
+::1 -[31 May 23 11:24 EAT] GET /view/videos 200 7.142ms 
+::1 -[31 May 23 11:24 EAT] GET /view/style.css 404 4.7125ms 
+::1 -[31 May 23 11:24 EAT] GET /view/main.js 404 8.9199ms 
+::1 -[31 May 23 11:25 EAT] GET /view/videos 200 9.5719ms 
+::1 -[31 May 23 11:26 EAT] GET /view/videos 200 11.6142ms 
+::1 -[31 May 23 11:27 EAT] POST /api/videos 201 4.9799ms 
+::1 -[31 May 23 11:27 EAT] POST /api/videos 201 6.3669ms 
+::1 -[31 May 23 11:27 EAT] POST /api/videos 201 9.3068ms 
+::1 -[31 May 23 11:27 EAT] POST /api/videos 201 9.8461ms 
+::1 -[31 May 23 11:27 EAT] POST /api/videos 201 7.6919ms 
+::1 -[31 May 23 11:27 EAT] GET /view/videos 200 12.2126ms 
+::1 -[31 May 23 11:27 EAT] GET /view/videos 200 7.5909ms 

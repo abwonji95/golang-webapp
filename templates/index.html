@@ -1,0 +1,23 @@
+{{template "header.html"}}
+            <body>
+                <div>
+                    <h3>My videos</h3>
+                </div>
+                <div>
+                    {{range .videos}}
+                    <div>
+                        <div width="200" height="300" src="{{ .URL}}">
+                        </div>
+                            
+
+                        <h4>{{ .Title}}</h4>
+                        <p>{{ .Description}}</p>
+
+                    </div>
+                    {{end}}
+                </div>
+            
+            </body>
+{{template "footer.html"}}
+
+        </html>
